@@ -1,0 +1,18 @@
+{%  load  static  %}
+
+<div>
+        <a href="{%  url  'make_post'  %}">Make Post</a>
+</div>
+
+ <div>
+         <!-- either "object_list"  or  "posts " are fine -->
+        {% for post in object_list %}
+              <!-- anchor of current photo and hyperlink 
+                       % is template language in Django-->
+                       <a  href="{%  url  'post_detail'  post.id  %}">  
+              <!-- adding forward slash '/' to avoid attaching dirc under current path -->
+                     <img  src="/{{post.image}}">
+            </a>
+        {% endfor %}
+
+</div>
