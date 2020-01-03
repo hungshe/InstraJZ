@@ -1,0 +1,34 @@
+<html>
+ {% load static %}  <!--Load Static settings-->
+        <head>
+                <meta charset="utf-8">  <!--encoding method is utf8-->
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>JZ Insta</title>
+                <!--<link href="{% static 'vender/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">-->
+                <!--<link rel="stylesheet" href="{% static 'vender/font-awesome-4.6.3/css/font-awesome.css'%}">-->
+                <link href="{% static 'css/style.css' %}" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        </head>
+        <body>
+            {% include 'header.html' %} <!--Include new file - > header, can be included in everypage-->
+
+            <div class="content-wrapper">
+                    <div class="container">
+                            {% block content %}
+                            {% endblock content %}
+                    </div>
+            </div>
+
+            <script type="text/javascript" src="{% static 'js/jquery-3.1.0.min.js' %}" ></script>
+            <script type="text/javascript" src="{% static 'vender/bootstrap/js/bootstrap.min.js' %}" ></script>
+            <script type="text/javascript" src="{% static 'js/ajax-csrf-auth.js' %}" ></script>
+            <script type="text/javascript" src="{% static 'js/index.js' %}" ></script>
+ 
+            {% block bonus %}
+            {% endblock %}
+  
+            {% block extrascript %}
+            {% endblock %}
+        </body>
+</html>

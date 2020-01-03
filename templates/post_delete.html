@@ -1,3 +1,5 @@
+{% extends 'base.html'%}
+{% block content %}
 <!-- Title  -->
 <h1>Delete Post</h1>
 <form action="" method="post" enctype="multipart/form-data">
@@ -5,3 +7,4 @@
         <p> Do you want to delete "{{post.title}}" ? This is not reversable operation</p>
         <button type="submit">Delete</button>
 </form>
+{% endblock content%}
