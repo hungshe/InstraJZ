@@ -131,3 +131,5 @@ LOGIN_REDIRECT_URL  =  'posts'
 LOGOUT_REDIRECT_URL  =  'posts'
 # Tell Django to use customized user model
 AUTH_USER_MODEL  =  'Insta.InstaUser'
+
+STATIC_ROOT  =  os.path.join(BASE_DIR 'staticfiles')
